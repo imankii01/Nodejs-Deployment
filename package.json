@@ -1,0 +1,21 @@
+{
+  "name": "dynamic-html-api",
+  "version": "1.0.0",
+  "description": "A dynamic HTML API built with Node.js and Express",
+  "main": "app.js",
+  "scripts": {
+    "start:prod": "NODE_ENV=production node app.js",
+    "start:uat": "NODE_ENV=uat node app.js",
+    "dev:prod": "NODE_ENV=production nodemon app.js",
+    "dev:uat": "NODE_ENV=uat nodemon app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}
