@@ -15,6 +15,9 @@ const port = process.env.PORT || 8000;
 console.log(`Using port: ${port}`);
 let server;
 
+app.get("/", (req, res) => {
+  res.send("Server is live");
+});
 app.get("/status", (req, res) => {
   res.send("Server is live");
 });
