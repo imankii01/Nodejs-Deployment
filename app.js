@@ -2,6 +2,8 @@
 
 const dotenv = require("dotenv");
 const express = require("express");
+const path = require("path");
+const fs = require("fs");
 const app = express();
 
 // Determine the environment and set the corresponding .env file
@@ -15,12 +17,20 @@ const port = process.env.PORT || 8000;
 console.log(`Using port: ${port}`);
 let server;
 
+const filePath = path.join(__dirname, "7A9388EF1330B211CDCA6F4AF0F6B1F9.txt");
+
 app.get("/", (req, res) => {
   res.send("Server is live");
 });
 app.get("/status", (req, res) => {
   res.send("Server is live");
 });
+app.get(
+  "/.well-known/pki-validation/7A9388EF1330B211CDCA6F4AF0F6B1F9.txt",
+  (req, res) => {
+    res.sendFile(filePath);
+  }
+);
 
 app.get("/archive.nptel.ac.in/noc/Ecertificate/", (req, res) => {
   const certificateId = req.query.q;
