@@ -17,7 +17,7 @@ const port = process.env.PORT || 8000;
 console.log(`Using port: ${port}`);
 let server;
 
-const filePath = path.join(__dirname, "7A9388EF1330B211CDCA6F4AF0F6B1F9.txt");
+const filePath = path.join(__dirname, "D7147661E70CA8975C47A24E30763C00.txt");
 
 app.get("/", (req, res) => {
   res.send("Server is live");
@@ -26,7 +26,7 @@ app.get("/status", (req, res) => {
   res.send("Server is live");
 });
 app.get(
-  "/.well-known/pki-validation/7A9388EF1330B211CDCA6F4AF0F6B1F9.txt",
+  "/.well-known/pki-validation/D7147661E70CA8975C47A24E30763C00.txt",
   (req, res) => {
     res.sendFile(filePath);
   }
